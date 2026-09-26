@@ -1,269 +1,1859 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Varun V Deshpande | Tech Pioneer</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Varun Deshpande — Software Engineer</title>
+  <meta
+    name="description"
+    content="Varun Deshpande is a software engineer building production systems across AI, distributed systems, data platforms, observability and developer infrastructure."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
-    body {
-      font-family: 'DM Sans', sans-serif;
+    :root {
+      --bg: #f4f4ef;
+      --surface: #ebeae4;
+      --surface-2: #e5e4de;
+      --text: #111111;
+      --muted: #65655f;
+      --line: #c9c8c1;
+      --accent: #1747ff;
+      --max: 1180px;
     }
-    .hero-bg {
-      background: linear-gradient(to right, #1e293b, #475569);
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ::selection {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .mono {
+      font-family: "DM Mono", monospace;
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--max));
+      margin: 0 auto;
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      font-family: "DM Mono", monospace;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-family: "DM Mono", monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 110px 0 90px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 180px;
+      gap: 80px;
+      align-items: end;
+    }
+
+    .eyebrow,
+    .section-label,
+    .case-number,
+    .metric-label,
+    .architecture-label {
+      font-family: "DM Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 20px 0 28px;
+      font-size: clamp(52px, 8vw, 100px);
+      line-height: 0.96;
+      letter-spacing: -0.075em;
+      font-weight: 600;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      font-size: 19px;
+      line-height: 1.6;
+      color: #42423e;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 24px;
+      margin-top: 34px;
+      flex-wrap: wrap;
+      font-family: "DM Mono", monospace;
+      font-size: 12px;
+    }
+
+    .hero-links a {
+      border-bottom: 1px solid var(--text);
+      padding-bottom: 4px;
+    }
+
+    .portrait {
+      width: 150px;
+      height: 180px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      border: 1px solid var(--line);
+    }
+
+    .portrait-caption {
+      margin-top: 12px;
+      font-family: "DM Mono", monospace;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .metric {
+      padding: 32px 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .metric:not(:first-child) {
+      padding-left: 32px;
+    }
+
+    .metric:last-child {
+      border-right: 0;
+    }
+
+    .metric-value {
+      margin-top: 8px;
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+      font-weight: 600;
+    }
+
+    section {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 50px;
+      padding: 70px 0 50px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      font-weight: 600;
+    }
+
+    .section-intro {
+      max-width: 650px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .case {
+      padding: 70px 0 85px;
+      border-top: 1px solid var(--line);
+    }
+
+    .case:first-child {
+      border-top: 0;
+    }
+
+    .case-top {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 50px;
+      margin-bottom: 45px;
+    }
+
+    .case-title {
+      margin: 10px 0 8px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1;
+      letter-spacing: -0.055em;
+      font-weight: 600;
+    }
+
+    .case-subtitle {
+      margin: 0;
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .case-result {
+      margin-top: 24px;
+      display: inline-flex;
+      flex-direction: column;
+      border-left: 2px solid var(--accent);
+      padding-left: 14px;
+    }
+
+    .case-result strong {
+      font-size: 25px;
+      letter-spacing: -0.04em;
+    }
+
+    .case-result span {
+      font-family: "DM Mono", monospace;
+      color: var(--muted);
+      font-size: 10px;
+      margin-top: 3px;
+    }
+
+    .case-content {
+      margin-left: 270px;
+      max-width: 850px;
+    }
+
+    .case-content p {
+      font-size: 16px;
+      color: #3f3f3a;
+      margin: 0 0 22px;
+    }
+
+    .case-content p strong {
+      color: var(--text);
+    }
+
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .tag {
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      padding: 6px 9px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    /* Architecture */
+
+    .architecture {
+      margin: 45px 0;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    .architecture-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .architecture-title {
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .architecture-body {
+      padding: 28px;
+      overflow-x: auto;
+    }
+
+    .flow {
+      min-width: 720px;
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .flow-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .flow-box {
+      border: 1px solid #aaa9a2;
+      background: var(--bg);
+      padding: 14px;
+      min-height: 58px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .flow-box strong {
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .flow-box span {
+      font-family: "DM Mono", monospace;
+      color: var(--muted);
+      font-size: 9px;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .flow-box.primary {
+      border-color: var(--accent);
+    }
+
+    .flow-arrow {
+      width: 38px;
+      flex: 0 0 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "DM Mono", monospace;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .alfie-stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    .alfie-layer {
+      display: grid;
+      grid-template-columns: 175px 1fr;
+      border: 1px solid #aaa9a2;
+      background: var(--bg);
+    }
+
+    .alfie-layer-label {
+      padding: 15px;
+      background: var(--surface-2);
+      border-right: 1px solid #aaa9a2;
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .alfie-layer-content {
+      padding: 15px;
+      font-size: 12px;
+      color: #464640;
+    }
+
+    .decision-flow {
+      display: grid;
+      grid-template-columns: 1fr 70px 1fr;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .decision {
+      border: 1px solid #aaa9a2;
+      padding: 20px;
+      background: var(--bg);
+    }
+
+    .decision strong {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    .decision span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .decision-arrow {
+      text-align: center;
+      font-family: "DM Mono", monospace;
+      color: var(--muted);
+    }
+
+    /* Two column technical details */
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 35px;
+    }
+
+    .detail {
+      background: var(--bg);
+      padding: 24px;
+    }
+
+    .detail h4 {
+      margin: 0 0 9px;
+      font-size: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .detail p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    /* Approach */
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-bottom: 80px;
+    }
+
+    .principle {
+      background: var(--bg);
+      padding: 30px;
+      min-height: 190px;
+    }
+
+    .principle-number {
+      font-family: "DM Mono", monospace;
+      color: var(--accent);
+      font-size: 11px;
+    }
+
+    .principle h3 {
+      margin: 30px 0 10px;
+      font-size: 18px;
+      letter-spacing: -0.03em;
+    }
+
+    .principle p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Experience */
+
+    .experience-list {
+      margin-bottom: 80px;
+    }
+
+    .experience {
+      display: grid;
+      grid-template-columns: 220px 1fr 170px;
+      gap: 35px;
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .experience:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .experience-company {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    .experience-role {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .experience-description {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .experience-date {
+      font-family: "DM Mono", monospace;
+      color: var(--muted);
+      font-size: 10px;
+      text-align: right;
+    }
+
+    /* Toolkit */
+
+    .toolkit {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-bottom: 80px;
+    }
+
+    .tool-group {
+      background: var(--bg);
+      padding: 26px;
+    }
+
+    .tool-group h4 {
+      margin: 0 0 16px;
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .tool-group p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* Contact */
+
+    .contact {
+      padding: 100px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+    }
+
+    .contact h2 {
+      margin: 15px 0 25px;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+      font-weight: 600;
+    }
+
+    .contact-copy {
+      max-width: 540px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .contact-email {
+      font-size: clamp(20px, 3vw, 30px);
+      letter-spacing: -0.04em;
+      border-bottom: 1px solid var(--text);
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 24px;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 22px;
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+    }
+
+    footer {
+      padding: 25px 0;
+      display: flex;
+      justify-content: space-between;
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 850px) {
+      .container {
+        width: min(calc(100% - 32px), var(--max));
+      }
+
+      .nav {
+        height: 64px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 75px 0 65px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .portrait {
+        width: 110px;
+        height: 130px;
+      }
+
+      h1 {
+        font-size: clamp(48px, 15vw, 80px);
+      }
+
+      .section-header,
+      .case-top {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .case-content {
+        margin-left: 0;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .metric,
+      .metric:not(:first-child) {
+        padding: 24px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .metric:last-child {
+        border-bottom: 0;
+      }
+
+      .principles,
+      .toolkit,
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .experience-date {
+        text-align: left;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .decision-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .decision-arrow {
+        transform: rotate(90deg);
+      }
+
+      .alfie-layer {
+        grid-template-columns: 1fr;
+      }
+
+      .alfie-layer-label {
+        border-right: 0;
+        border-bottom: 1px solid #aaa9a2;
+      }
+
+      footer {
+        gap: 20px;
+        flex-direction: column;
+      }
     }
   </style>
+
 </head>
-<body class="text-gray-100 bg-gray-50">
-  <!-- Hero -->
-  <section class="hero-bg py-20 px-4 text-center">
-    <div class="max-w-5xl mx-auto">
-      <div class="w-32 h-32 mx-auto mb-6 bg-white rounded-full overflow-hidden shadow-lg">
-        <img src="varun.jpeg" alt="Varun V Deshpande Photo" class="object-cover w-full h-full" />
-      </div>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Varun V Deshpande</h1>
-      <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-        A technology pioneer with 7+ years of experience building scalable systems, AI-integrated platforms, cloud-native infrastructures, high-performance APIs, real-time analytics dashboards, and fully automated pipelines. I architect complex distributed systems, lead cross-functional teams, and deliver business-critical solutions that drive millions in revenue.
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">VARUN.DESHPANDE</a>
+
+
+  <nav class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#approach">Approach</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
+
+  </header>
+
+  <main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">Software Engineer / AI / Systems</div>
+
+      <h1>I build systems that work in the real world.</h1>
+
+      <p class="hero-copy">
+        I've spent the last 9 years designing and shipping production software
+        across AI, distributed systems, data platforms, observability, and
+        developer infrastructure. I take ambiguous problems from problem
+        definition → architecture → implementation → production, and stay
+        close to the people actually using what I build.
       </p>
-    </div>
-  </section>
 
-<!-- UAE Job Banner 
-<section class="bg-yellow-100 py-12 px-6">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl font-bold text-gray-900 mb-4">Open to Opportunities in the UAE</h2>
-    <p class="text-gray-800 mb-6">Actively seeking roles in forward-thinking tech companies across the UAE. With 7+ years of building systems from the ground up and driving scale across enterprise and startup environments, I bring both technical depth and speed to execution.</p>
-    <a href="mailto:varun.vd51@gmail.com" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-indigo-700 transition">Connect with Me</a>
-  </div>
-</section>
--->
-
-<!-- Performance & Open Source -->
-<section class="py-20 px-6 bg-gray-50">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Engineering Strengths</h2>
-    <p class="text-center text-md text-gray-700 max-w-3xl mx-auto mb-10">
-      Over the past 7+ years, I've engineered reputation management platforms across all three major cloud ecosystems (AWS, GCP, Azure), built resilient financial transaction systems in enterprise banking, and architected robust, scalable pipelines using Apache Airflow. Whether starting from zero at a startup or transforming operations at global giants, I bring depth, scale, and velocity.
-    </p>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-green-500 flex flex-col justify-between h-full">
-        <div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-3">SQL Optimization Wins</h3>
-          <p class="text-gray-700 mb-4 text-sm">
-            I specialize in making databases fly. From massive joins to real-time reporting, my query optimization work has had measurable impact.
-          </p>
-          <ul class="list-disc list-inside text-gray-600 text-sm space-y-2">
-            <li>Reduced query times from 60s to under 100ms using CTEs, indexes, and materialized views</li>
-            <li>Refactored dashboard queries to scale with live data from 5+ platforms</li>
-            <li>Combined Redis caching and PostgreSQL for hybrid real-time access</li>
-            <li>Designed fallback-safe fail-open strategies to ensure SLA continuity</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-yellow-400 flex flex-col justify-between h-full">
-        <div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-3">Rust + RedisGraph Contribution</h3>
-          <p class="text-gray-700 mb-4 text-sm">
-            As part of my open-source work, I added Rust support to <a href="https://github.com/HexmosTech/r2d2-redis-graph" class="text-blue-600 underline">R2D2 RedisGraph</a>, enhancing performance, type safety, and concurrency control in graph database operations.
-          </p>
-          <ul class="list-disc list-inside text-gray-600 text-sm space-y-2">
-            <li>Extended driver with async/await and connection pooling</li>
-            <li>Enabled high-throughput graph queries using safe typed APIs</li>
-            <li>Contributed traits and builder pattern for ergonomic queries</li>
-            <li>Actively collaborated with maintainers for upstream patches</li>
-          </ul>
-        </div>
-      </div>
-
-          <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-blue-500 flex flex-col justify-between h-full">
-        <div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-3">Custom CD Platform for Walmart</h3>
-          <p class="text-gray-700 mb-4 text-sm">
-            Developed a notebook-based CD platform using Jupyter, Papermill, and Airflow adopted by Walmart’s entire data science team. Enabled zero-DevOps self-service deployments.
-          </p>
-          <ul class="list-disc list-inside text-gray-600 text-sm space-y-2">
-            <li>End-to-end architecture and training for large-scale adoption</li>
-            <li>Enabled independent deployment of production pipelines</li>
-            <li>Reduced time-to-deploy by 80% for data scientists</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-purple-500 flex flex-col justify-between h-full">
-        <div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-3">Timezone Compliance Architecture</h3>
-          <p class="text-gray-700 mb-4 text-sm">
-            Built timezone-compliant analytics infrastructure from scratch for a global review platform with inconsistent input data and legacy tech debt.
-          </p>
-          <ul class="list-disc list-inside text-gray-600 text-sm space-y-2">
-            <li>Introduced normalized UTC conversions and offset mappings</li>
-            <li>Ensured query accuracy across 20+ countries and platforms</li>
-            <li>Enabled reliable global reporting for brands and geo-clusters</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-red-500 flex flex-col justify-between h-full">
-        <div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-3">Rapid MVP Delivery – MathCo</h3>
-          <p class="text-gray-700 mb-4 text-sm">
-            Delivered multiple MVPs in record time for Fortune 500 clients. Led projects that went from idea to client demo-ready in under a week.
-          </p>
-          <ul class="list-disc list-inside text-gray-600 text-sm space-y-2">
-            <li>Created brand sentiment monitoring for MARS (Whiskas, Pedigree)</li>
-            <li>Ingested live data and built dashboards & alerting systems</li>
-            <li>Used Azure, Databricks, and Sprinklr for real-time delivery</li>
-          </ul>
-        </div>
+      <div class="hero-links">
+        <a href="mailto:varun.vd51@gmail.com">EMAIL</a>
+        <a href="https://github.com/varunvd" target="_blank" rel="noopener">GITHUB</a>
       </div>
     </div>
+
+    <div>
+      <img
+        class="portrait"
+        src="./varun.jpeg"
+        alt="Varun Deshpande"
+      />
+
+      <div class="portrait-caption">
+        Engineering across<br />
+        product + infrastructure
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- Projects & Experience -->
-<section class="py-20 px-6 bg-white">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Startups & Scale</h2>
-<p class="text-gray-700 text-md max-w-3xl mx-auto mb-12 text-center">
-  I’ve been the founding engineer at two high-growth startups: <a href="https://www.momos.com/" class="text-blue-600 underline">Momos</a> and <a href="https://mathco.com/" class="text-blue-600 underline">TheMathCompany</a>. At Momos, I built the entire engineering stack from scratch (0 → 1) including data ingestion pipelines, multi-platform integrations, and outlet performance leaderboards. At MathCo, I scaled systems from MVP to enterprise-grade deployments (0 → 100), including brand reputation management for clients like MARS, building real-time sentiment dashboards and automated alerting systems. I’ve built for speed, scale, and stakeholder impact.
-</p>
-    <div class="space-y-12">
+<!-- METRICS -->
 
-      <div class="grid md:grid-cols-2 gap-8 items-start">
-        <div class="bg-gray-100 rounded-xl p-6 shadow-lg">
-          <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Alfie AI – The Concierge That Drove Massive Revenue </h3>
-          <p class="text-gray-700 mb-3">Designed, built, and launched Alfie — a personalized AI concierge platform for the F&B and hospitality sector in the MENA market. Integrated with WhatsApp and customer review systems. Delivered end-to-end architecture including multilingual prompt engineering, AI pipelines, and real-time feedback loops.</p>
-          <ul class="list-disc list-inside text-sm text-gray-600">
-            <li>Closed enterprise deals worth ~$2M within 2 quarters</li>
-            <li>Plug-and-play integrations for Talabat, Foodpanda, etc.</li>
-            <li>99.9% uptime using AWS Step Functions, Lambda, Batch</li>
-            <li>Multi-region support with localized Arabic/English UX</li>
-          </ul>
-        </div>
+<div class="container metrics">
 
-        <div class="bg-gray-100 rounded-xl p-6 shadow-lg h-full flex flex-col justify-between">
-          <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Rakuten Sixth Sense – Global Infra Monitoring</h3>
-          <p class="text-gray-700 mb-3">Built a full-stack observability platform from scratch. Designed synthetic monitoring, telemetry pipelines, and dashboard integrations to support 100+ engineering teams worldwide.</p>
-          <ul class="list-disc list-inside text-sm text-gray-600">
-            <li>Integrated with ElasticSearch and Apache Airflow</li>
-            <li>Automated incident simulation with real-time alerts</li>
-            <li>Custom DB agents for latency, throughput, and error tracing</li>
-          </ul>
-        </div>
+  <div class="metric">
+    <div class="metric-label">Experience</div>
+    <div class="metric-value">9 years</div>
+  </div>
+
+  <div class="metric">
+    <div class="metric-label">Enterprise impact</div>
+    <div class="metric-value">~$2M</div>
+  </div>
+
+  <div class="metric">
+    <div class="metric-label">Query optimization</div>
+    <div class="metric-value">60s → &lt;100ms</div>
+  </div>
+
+</div>
+
+<!-- WORK -->
+
+<section id="work">
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-label">01 / Selected work</div>
+
+      <div>
+        <h2 class="section-title">
+          Systems, not demos.
+        </h2>
+
+        <p class="section-intro">
+          A selection of systems I've designed and shipped. The common thread
+          is taking a messy real-world workflow and turning it into software
+          that people can actually depend on.
+        </p>
       </div>
-
-      <div class="grid md:grid-cols-2 gap-8 items-start">
-        <div class="bg-gray-100 rounded-xl p-6 shadow-lg">
-          <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Notebook CD Framework – Walmart Scale</h3>
-          <p class="text-gray-700 mb-3">Designed a continuous deployment platform using Jupyter, Papermill, and Airflow. Enabled data scientists at Fortune 500 companies to deploy pipelines without DevOps involvement.</p>
-          <ul class="list-disc list-inside text-sm text-gray-600">
-            <li>Adopted across Walmart's entire data science org</li>
-            <li>Self-service deployment of production-grade notebooks</li>
-            <li>Conducted internal training for successful hand-off</li>
-          </ul>
-        </div>
-
-        <div class="bg-gray-100 rounded-xl p-6 shadow-lg">
-          <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Core Banking – Oracle Financial Systems</h3>
-          <p class="text-gray-700 mb-3">Handled critical PL/SQL migrations and settlement logic for banking operations with billions in monetary flow. Built scripts and workflows that met stringent regulatory compliance.</p>
-          <ul class="list-disc list-inside text-sm text-gray-600">
-            <li>Zero-error production deployments in banking systems</li>
-            <li>Worked in high-trust environments ensuring financial accuracy</li>
-            <li>Led multi-country upgrade rollouts during version migrations</li>
-          </ul>
-        </div>
-      </div>
-
     </div>
+
+    <!-- ALFIE -->
+
+    <article class="case">
+
+      <div class="case-top">
+        <div>
+          <div class="case-number">01</div>
+        </div>
+
+        <div>
+          <h3 class="case-title">Alfie</h3>
+
+          <p class="case-subtitle">
+            AI-powered review operations — turning incoming customer reviews
+            into validated, context-aware responses and business actions.
+          </p>
+
+          <div class="case-result">
+            <strong>~$2M</strong>
+            <span>enterprise deal impact</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-content">
+
+        <p>
+          <strong>The problem.</strong>
+          Restaurants receive reviews continuously across Google, Yelp,
+          Zomato, and other platforms. Responding well means understanding
+          the review, the brand, the location, available offers or loyalty
+          actions, business rules, language, and what should actually happen
+          next. Doing that manually does not scale.
+        </p>
+
+        <p>
+          <strong>What I built.</strong>
+          I led the architecture and end-to-end development of Alfie, a
+          production AI workflow that turns each incoming review into a
+          response-ready business event. Reviews are ingested from multiple
+          platforms through scheduled jobs, normalized, placed onto a queue,
+          and processed asynchronously by workers.
+        </p>
+
+        <p>
+          Each worker retrieves the appropriate brand context from cache.
+          That context can include brand-specific guidance, offers, loyalty
+          actions, business rules, and the information required for
+          calculations or downstream actions.
+        </p>
+
+        <p>
+          If the review arrives in another language, the workflow can invoke
+          a translation tool before sending the enriched context to the
+          foundation model. The model generates the response, after which
+          the output goes through a dedicated validation and guardrail layer
+          before it can proceed.
+        </p>
+
+        <p>
+          The final workflow supports both operating modes:
+          <strong>automatic execution</strong> when automation is enabled,
+          or <strong>human review</strong> when an operator wants to inspect,
+          edit, approve, and send the response themselves.
+        </p>
+
+        <!-- ALFIE ARCHITECTURE -->
+
+        <div class="architecture">
+
+          <div class="architecture-head">
+            <div class="architecture-title">Alfie / End-to-end architecture</div>
+            <div class="architecture-label">Production workflow</div>
+          </div>
+
+          <div class="architecture-body">
+
+            <div class="flow">
+
+              <div class="flow-column">
+                <div class="flow-box">
+                  <strong>Google</strong>
+                  <span>reviews</span>
+                </div>
+
+                <div class="flow-box">
+                  <strong>Yelp / Zomato</strong>
+                  <span>reviews</span>
+                </div>
+
+                <div class="flow-box">
+                  <strong>Other platforms</strong>
+                  <span>review sources</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box primary">
+                  <strong>Scheduled ingestion</strong>
+                  <span>cron / fetch / normalize</span>
+                </div>
+
+                <div class="flow-box primary">
+                  <strong>Review event</strong>
+                  <span>normalized representation</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box primary">
+                  <strong>Message queue</strong>
+                  <span>decoupling / async processing</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box primary">
+                  <strong>Alfie worker</strong>
+                  <span>orchestration</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box">
+                  <strong>Response + action</strong>
+                  <span>automate or human review</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ALFIE WORKER -->
+
+        <div class="architecture">
+
+          <div class="architecture-head">
+            <div class="architecture-title">Inside the Alfie worker</div>
+            <div class="architecture-label">Context → AI → validation</div>
+          </div>
+
+          <div class="architecture-body">
+
+            <div class="alfie-stack">
+
+              <div class="alfie-layer">
+                <div class="alfie-layer-label">01 / Review</div>
+                <div class="alfie-layer-content">
+                  Incoming review + platform metadata + restaurant / brand context.
+                </div>
+              </div>
+
+              <div class="alfie-layer">
+                <div class="alfie-layer-label">02 / Context</div>
+                <div class="alfie-layer-content">
+                  Retrieve brand-specific context from cache: voice, offers,
+                  loyalty actions, business rules, calculations and relevant
+                  operational information.
+                </div>
+              </div>
+
+              <div class="alfie-layer">
+                <div class="alfie-layer-label">03 / Language</div>
+                <div class="alfie-layer-content">
+                  Detect language requirements and invoke translation tooling
+                  when the review needs to be processed in another language.
+                </div>
+              </div>
+
+              <div class="alfie-layer">
+                <div class="alfie-layer-label">04 / AI</div>
+                <div class="alfie-layer-content">
+                  Foundation model receives the review and the relevant
+                  business context and generates the candidate response.
+                </div>
+              </div>
+
+              <div class="alfie-layer">
+                <div class="alfie-layer-label">05 / Validation</div>
+                <div class="alfie-layer-content">
+                  Dedicated validation and guardrail layer checks whether the
+                  generated result can safely continue through the workflow.
+                </div>
+              </div>
+
+              <div class="alfie-layer">
+                <div class="alfie-layer-label">06 / Execution</div>
+                <div class="alfie-layer-content">
+                  Validated output becomes either an automated response/action
+                  or a response presented to an operator for review and manual send.
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="decision-flow">
+
+          <div class="decision">
+            <strong>Automation enabled</strong>
+            <span>
+              Validated response proceeds through the configured automated workflow.
+            </span>
+          </div>
+
+          <div class="decision-arrow">OR</div>
+
+          <div class="decision">
+            <strong>Human review</strong>
+            <span>
+              Operator reviews, edits, approves and sends the prepared response.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="detail-grid">
+
+          <div class="detail">
+            <h4>AI inside a deterministic system</h4>
+            <p>
+              The model is one component of the system. Context retrieval,
+              tools, business rules, calculations, validation and execution
+              surround it.
+            </p>
+          </div>
+
+          <div class="detail">
+            <h4>Asynchronous by design</h4>
+            <p>
+              Review ingestion is separated from processing through a queue,
+              allowing the external ingestion path and AI processing workflow
+              to operate independently.
+            </p>
+          </div>
+
+          <div class="detail">
+            <h4>Brand-specific context</h4>
+            <p>
+              The same workflow can operate across brands while injecting
+              the context and rules relevant to each business.
+            </p>
+          </div>
+
+          <div class="detail">
+            <h4>Automation with control</h4>
+            <p>
+              Customers can choose how much autonomy they want instead of
+              being forced into either complete automation or complete manual work.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="case-tags">
+          <span class="tag">OpenAI</span>
+          <span class="tag">Gemini</span>
+          <span class="tag">AI Agents</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Queues</span>
+          <span class="tag">Caching</span>
+          <span class="tag">LLM Guardrails</span>
+          <span class="tag">Translation</span>
+          <span class="tag">Distributed Systems</span>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- AI E2E -->
+
+    <article class="case">
+
+      <div class="case-top">
+        <div>
+          <div class="case-number">02</div>
+        </div>
+
+        <div>
+          <h3 class="case-title">AI E2E Test Engineering</h3>
+
+          <p class="case-subtitle">
+            Verification for software increasingly written by AI.
+          </p>
+
+          <div class="case-result">
+            <strong>Requirement → executable test</strong>
+            <span>AI-assisted verification workflow</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-content">
+
+        <p>
+          <strong>The problem.</strong>
+          As AI makes it dramatically easier to generate application code,
+          verification becomes an increasingly important part of the engineering
+          loop. Writing a test is not enough: the system needs to understand
+          the requirement, understand the existing codebase, understand the
+          application state, and make sure the required test data exists.
+        </p>
+
+        <p>
+          <strong>What I built.</strong>
+          I built an AI-assisted E2E testing workflow around Playwright.
+          A Jira or Notion ticket becomes the starting point. The system
+          understands the requirement and codebase, uses a Playwright MCP
+          server to explore the application, determines what state and data
+          are required, and identifies missing prerequisites.
+        </p>
+
+        <p>
+          Once the environment is ready, the system produces the Playwright
+          test specification. Tests can then run on a daily schedule or as
+          part of a CI/CD pipeline.
+        </p>
+
+        <div class="architecture">
+
+          <div class="architecture-head">
+            <div class="architecture-title">Verification pipeline</div>
+            <div class="architecture-label">Requirement → test</div>
+          </div>
+
+          <div class="architecture-body">
+
+            <div class="flow">
+
+              <div class="flow-column">
+                <div class="flow-box primary">
+                  <strong>Jira / Notion</strong>
+                  <span>requirement / ticket</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box">
+                  <strong>Understand requirement</strong>
+                  <span>what should be verified?</span>
+                </div>
+
+                <div class="flow-box">
+                  <strong>Understand codebase</strong>
+                  <span>how does the feature work?</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box primary">
+                  <strong>Playwright MCP</strong>
+                  <span>explore application</span>
+                </div>
+
+                <div class="flow-box">
+                  <strong>Determine test state</strong>
+                  <span>data + prerequisites</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box">
+                  <strong>Missing data?</strong>
+                  <span>guide developer</span>
+                </div>
+
+                <div class="flow-box primary">
+                  <strong>Generate spec</strong>
+                  <span>Playwright test</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box">
+                  <strong>CI / Daily run</strong>
+                  <span>continuous verification</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="case-tags">
+          <span class="tag">AI</span>
+          <span class="tag">Playwright</span>
+          <span class="tag">MCP</span>
+          <span class="tag">Codebase Understanding</span>
+          <span class="tag">E2E Testing</span>
+          <span class="tag">CI/CD</span>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- BULK RESOLUTION -->
+
+    <article class="case">
+
+      <div class="case-top">
+        <div>
+          <div class="case-number">03</div>
+        </div>
+
+        <div>
+          <h3 class="case-title">Bulk Resolution</h3>
+
+          <p class="case-subtitle">
+            Making large customer-facing operations feel like a normal product action.
+          </p>
+
+          <div class="case-result">
+            <strong>~100K</strong>
+            <span>tickets per operation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-content">
+
+        <p>
+          Customers needed to resolve or unresolve around 100,000 tickets
+          in a single operation directly from the product. The existing
+          implementation had grown into a collection of filters and separate
+          ticket-type implementations, making large operations slow and
+          difficult to reason about.
+        </p>
+
+        <p>
+          The important architectural decision was to separate
+          <strong>selection</strong> from <strong>execution</strong>.
+          Once the filters have been evaluated and the ticket IDs are known,
+          the IDs are materialized in Redis under a deterministic key that
+          represents the relevant account, user and filter combination.
+        </p>
+
+        <p>
+          The frontend receives that key. When the customer triggers the
+          operation, the backend retrieves the materialized IDs and performs
+          the resolve or unresolve operation without having to repeat the
+          expensive selection work.
+        </p>
+
+        <div class="architecture">
+
+          <div class="architecture-head">
+            <div class="architecture-title">Selection / execution split</div>
+            <div class="architecture-label">Materialize once → execute deterministically</div>
+          </div>
+
+          <div class="architecture-body">
+
+            <div class="flow">
+
+              <div class="flow-column">
+                <div class="flow-box">
+                  <strong>Customer filters</strong>
+                  <span>account / user / ticket criteria</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box primary">
+                  <strong>Compute ticket IDs</strong>
+                  <span>expensive selection</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box primary">
+                  <strong>Redis</strong>
+                  <span>materialized IDs + deterministic key</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box">
+                  <strong>Frontend</strong>
+                  <span>receives operation key</span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="flow-column">
+                <div class="flow-box primary">
+                  <strong>Backend execution</strong>
+                  <span>resolve / unresolve</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="case-tags">
+          <span class="tag">Redis</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Distributed Systems</span>
+          <span class="tag">Caching</span>
+          <span class="tag">Performance</span>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- RESTAURANT INTELLIGENCE -->
+
+    <article class="case">
+
+      <div class="case-top">
+        <div>
+          <div class="case-number">04</div>
+        </div>
+
+        <div>
+          <h3 class="case-title">Restaurant Intelligence</h3>
+
+          <p class="case-subtitle">
+            Multi-platform analytics infrastructure built from scratch.
+          </p>
+
+          <div class="case-result">
+            <strong>60s → &lt;100ms</strong>
+            <span>query runtime after optimization</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-content">
+
+        <p>
+          Restaurant feedback lived across multiple platforms including
+          Google, Yelp, Zomato and others. I designed and built the analytics
+          infrastructure from scratch to provide unified insights across
+          brands, locations and individual outlets.
+        </p>
+
+        <p>
+          The system handled hundreds of restaurants, thousands of outlets
+          and millions of records per week. I worked across ingestion,
+          processing, storage and the application layer rather than treating
+          analytics as a reporting-only problem.
+        </p>
+
+        <p>
+          One of the major performance problems was query latency approaching
+          a minute. Through SQL optimization and intelligent indexing,
+          frequently used analytical queries were reduced to under 100ms.
+        </p>
+
+        <div class="case-tags">
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Redis</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Python</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Data Engineering</span>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- CLUSTER MANAGER -->
+
+    <article class="case">
+
+      <div class="case-top">
+        <div>
+          <div class="case-number">05</div>
+        </div>
+
+        <div>
+          <h3 class="case-title">Cluster Manager</h3>
+
+          <p class="case-subtitle">
+            Production deployment infrastructure for Walmart's data science team.
+          </p>
+
+          <div class="case-result">
+            <strong>~80%</strong>
+            <span>deployment-time reduction</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-content">
+
+        <p>
+          Data scientists at Walmart needed a reliable way to run and
+          schedule production-grade Jupyter notebooks without depending on
+          DevOps teams for every deployment.
+        </p>
+
+        <p>
+          I designed and built a deployment platform around Jupyter
+          Notebooks, Papermill and Airflow that turned notebook execution
+          into a self-service production workflow.
+        </p>
+
+        <p>
+          The platform was adopted across Walmart's data science team.
+          I also trained the client team directly, helping move the system
+          from software delivery into actual organizational adoption.
+        </p>
+
+        <div class="case-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Airflow</span>
+          <span class="tag">Papermill</span>
+          <span class="tag">Jupyter</span>
+          <span class="tag">Data Platforms</span>
+          <span class="tag">DevOps</span>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- RAKUTEN -->
+
+    <article class="case">
+
+      <div class="case-top">
+        <div>
+          <div class="case-number">06</div>
+        </div>
+
+        <div>
+          <h3 class="case-title">Rakuten Sixth Sense</h3>
+
+          <p class="case-subtitle">
+            Observability infrastructure across global engineering teams.
+          </p>
+
+          <div class="case-result">
+            <strong>100+</strong>
+            <span>engineering teams supported</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-content">
+
+        <p>
+          Sixth Sense was an internal observability platform spanning
+          infrastructure, applications and databases across global teams.
+          I worked on synthetic monitoring, database monitoring and the
+          telemetry infrastructure behind the platform.
+        </p>
+
+        <p>
+          I built and scaled programmable synthetic monitoring in Python,
+          owning high-level and low-level designs for user journeys and
+          checks. Airflow orchestrated monitoring suites while the platform
+          surfaced live pass/fail results.
+        </p>
+
+        <p>
+          I also built custom database monitoring agents that collected
+          query-level metrics, latency patterns and failure events, pushing
+          telemetry into Elasticsearch for visualization and investigation.
+        </p>
+
+        <p>
+          The work included collaborating with SRE, platform and application
+          teams to define SLIs and SLOs and integrate observability into the
+          engineering lifecycle.
+        </p>
+
+        <div class="case-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Airflow</span>
+          <span class="tag">Elasticsearch</span>
+          <span class="tag">Synthetic Monitoring</span>
+          <span class="tag">Observability</span>
+          <span class="tag">SLI / SLO</span>
+        </div>
+
+      </div>
+    </article>
+
   </div>
 </section>
 
-<!-- Open Source Highlight -->
-<section class="py-20 px-6 bg-gray-50">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">Open Source Spotlight</h2>
-    <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-yellow-500">
-      <h3 class="text-xl font-semibold text-gray-800 mb-3">Rust + RedisGraph Contribution</h3>
-      <p class="text-gray-700 mb-4 text-sm">
-        Contributed to <a href="https://github.com/HexmosTech/r2d2-redis-graph" class="text-blue-600 underline font-medium">R2D2 RedisGraph</a> by adding Rust support for enhanced type safety, performance, and concurrency control. This enabled seamless connection pooling and efficient graph operations in Rust environments.
-      </p>
-      <ul class="list-disc list-inside text-gray-600 text-sm space-y-2">
-        <li>Extended driver with async/await and connection pooling</li>
-        <li>Enabled high-throughput graph queries using safe typed APIs</li>
-        <li>Contributed traits and builder pattern for ergonomic queries</li>
-        <li>Actively collaborated with maintainers for upstream patches</li>
-      </ul>
+<!-- APPROACH -->
+
+<section id="approach">
+
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-label">02 / Approach</div>
+
+      <div>
+        <h2 class="section-title">
+          How I work.
+        </h2>
+
+        <p class="section-intro">
+          I care about the entire path from a problem someone has to a
+          system people can rely on. Architecture matters, but so do
+          adoption, operations and what happens after launch.
+        </p>
+      </div>
     </div>
+
+    <div class="principles">
+
+      <div class="principle">
+        <div class="principle-number">01</div>
+        <h3>Start with the real problem</h3>
+        <p>
+          Understand who is affected, what they are doing today and where
+          the actual bottleneck is before designing the system.
+        </p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-number">02</div>
+        <h3>Separate expensive work</h3>
+        <p>
+          Move computation to the right boundary. Materialize expensive
+          work when appropriate instead of repeatedly making the user wait.
+        </p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-number">03</div>
+        <h3>AI is part of the system</h3>
+        <p>
+          Models need context, tools, constraints, validation and clear
+          execution boundaries to become dependable production software.
+        </p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-number">04</div>
+        <h3>Measure what happens</h3>
+        <p>
+          Usage analytics, RUM sessions, system metrics and customer
+          behavior tell you whether the thing you built actually works.
+        </p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-number">05</div>
+        <h3>Own the whole path</h3>
+        <p>
+          Architecture, implementation, deployment, customer interaction,
+          debugging and adoption are all part of shipping software.
+        </p>
+      </div>
+
+      <div class="principle">
+        <div class="principle-number">06</div>
+        <h3>Design for adoption</h3>
+        <p>
+          A technically correct system has limited value if people cannot
+          understand it, trust it or fit it into how they already work.
+        </p>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
-<!-- Categorized Tech Stack -->
-<section class="py-20 px-6 bg-gray-900">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold text-white mb-10">Technical Stack</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-left text-sm text-white">
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-label">03 / Experience</div>
 
       <div>
-        <h3 class="text-xl font-semibold mb-4 text-indigo-400">Languages & Frameworks</h3>
-        <ul class="space-y-2">
-          <li>🟧 Python, Go, Java, Rust</li>
-          <li>🟨 JavaScript, TypeScript, Node.js</li>
-          <li>🟦 React, Next.js, HTML5, CSS3</li>
-          <li>🟩 Flask, Django, Express, Spring Boot</li>
-        </ul>
+        <h2 class="section-title">
+          Nine years of shipping.
+        </h2>
+
+        <p class="section-intro">
+          Across product engineering, data platforms, enterprise systems,
+          observability and AI.
+        </p>
+      </div>
+    </div>
+
+    <div class="experience-list">
+
+      <div class="experience">
+        <div>
+          <div class="experience-company">Merchant Management Solutions</div>
+          <div class="experience-role">Software Engineer</div>
+        </div>
+
+        <p class="experience-description">
+          Production AI systems, distributed workflows, analytics platforms,
+          customer-facing product infrastructure and developer tooling.
+          Architecture, implementation, deployment and customer-facing delivery.
+        </p>
+
+        <div class="experience-date">
+          Nov 2022 — Present
+        </div>
       </div>
 
-      <div>
-        <h3 class="text-xl font-semibold mb-4 text-indigo-400">Databases & Storage</h3>
-        <ul class="space-y-2">
-          <li>🗄️ PostgreSQL, MySQL</li>
-          <li>📦 Redis, ElasticSearch, BigQuery</li>
-        </ul>
+      <div class="experience">
+        <div>
+          <div class="experience-company">Rakuten</div>
+          <div class="experience-role">Engineering</div>
+        </div>
+
+        <p class="experience-description">
+          Observability infrastructure, synthetic monitoring, database
+          monitoring and telemetry systems supporting global engineering teams.
+        </p>
+
+        <div class="experience-date">
+          Rakuten
+        </div>
       </div>
 
-      <div>
-        <h3 class="text-xl font-semibold mb-4 text-indigo-400">Cloud & DevOps</h3>
-        <ul class="space-y-2">
-          <li>☁️ AWS, GCP, Azure</li>
-          <li>🐳 Docker, Kubernetes, Jenkins</li>
-          <li>🔁 Apache Airflow, CI/CD Pipelines</li>
-        </ul>
+      <div class="experience">
+        <div>
+          <div class="experience-company">The Math Company</div>
+          <div class="experience-role">Software Engineer</div>
+        </div>
+
+        <p class="experience-description">
+          Built production data and deployment systems for enterprise clients,
+          including Walmart, with a focus on self-service platforms and
+          operational automation.
+        </p>
+
+        <div class="experience-date">
+          Mar 2019 — Jan 2021
+        </div>
       </div>
 
-      <div>
-        <h3 class="text-xl font-semibold mb-4 text-indigo-400">AI/ML & Data Engineering</h3>
-        <ul class="space-y-2">
-          <li>🤖 Model Integration, Generative AI APIs</li>
-          <li>📊 Python ML Libraries, SQL Optimization</li>
-          <li>⚙️ ETL Pipelines, System Design, Performance Tuning</li>
-        </ul>
-      </div>
+      <div class="experience">
+        <div>
+          <div class="experience-company">Oracle</div>
+          <div class="experience-role">Software Engineer</div>
+        </div>
 
-      <div>
-        <h3 class="text-xl font-semibold mb-4 text-indigo-400">Open Source & Tools</h3>
-        <ul class="space-y-2">
-          <li>🔧 Open Source Contributions</li>
-          <li>🧰 RedisGraph Rust, Custom Tooling</li>
-        </ul>
+        <p class="experience-description">
+          Worked on core settlement systems in the banking domain, KYC
+          workflows, React applications and sensitive database migrations.
+        </p>
+
+        <div class="experience-date">
+          Aug 2017 — Feb 2019
+        </div>
       </div>
 
     </div>
+
   </div>
 </section>
 
-  <!-- Contact -->
-  <footer id="contact" class="bg-gray-800 text-white py-12">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-xl font-semibold mb-4">Let’s Build Something</h3>
-      <p class="mb-2">📧 <a href="mailto:varun.vd51@gmail.com" class="underline">varun.vd51@gmail.com</a></p>
-            <div class="mt-4 space-x-4">
-        <a href="https://github.com/varunvd" class="underline text-blue-400">GitHub</a>
-        <a href="https://www.linkedin.com/in/varunvd" class="underline text-blue-400">LinkedIn</a>
+<!-- TOOLKIT -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-header">
+      <div class="section-label">04 / Toolkit</div>
+
+      <div>
+        <h2 class="section-title">
+          Tools follow the problem.
+        </h2>
+
+        <p class="section-intro">
+          A practical stack built through production systems rather than
+          technology collecting.
+        </p>
       </div>
     </div>
+
+    <div class="toolkit">
+
+      <div class="tool-group">
+        <h4>AI</h4>
+        <p>
+          OpenAI · Gemini · LLM applications · AI agents ·
+          RAG / context systems · guardrails · evaluation · MCP
+        </p>
+      </div>
+
+      <div class="tool-group">
+        <h4>Backend</h4>
+        <p>
+          Python · Node.js · TypeScript · Flask · APIs ·
+          asynchronous processing · distributed systems
+        </p>
+      </div>
+
+      <div class="tool-group">
+        <h4>Cloud</h4>
+        <p>
+          AWS · Lambda · SQS · SNS · EventBridge ·
+          Step Functions · Batch
+        </p>
+      </div>
+
+      <div class="tool-group">
+        <h4>Data</h4>
+        <p>
+          PostgreSQL · Redis · Elasticsearch · Snowflake ·
+          Databricks · data pipelines · SQL optimization
+        </p>
+      </div>
+
+      <div class="tool-group">
+        <h4>Infrastructure</h4>
+        <p>
+          Airflow · observability · synthetic monitoring ·
+          CI/CD · queues · caching · production operations
+        </p>
+      </div>
+
+      <div class="tool-group">
+        <h4>Frontend & Testing</h4>
+        <p>
+          React · Playwright · E2E testing · MCP ·
+          product analytics · RUM
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="container contact">
+
+    <div class="contact-grid">
+
+      <div>
+        <div class="section-label">05 / Contact</div>
+
+        <h2>
+          I’m available for engineering work.
+        </h2>
+
+        <p class="contact-copy">
+          Full-time roles, contracts, consulting or project work.
+          If you need someone who can take a problem from architecture
+          through production, get in touch.
+        </p>
+      </div>
+
+      <div>
+        <a
+          class="contact-email"
+          href="mailto:varun.vd51@gmail.com"
+        >
+          varun.vd51@gmail.com
+        </a>
+
+        <div class="contact-links">
+          <a
+            href="https://github.com/varunvd"
+            target="_blank"
+            rel="noopener"
+          >
+            GITHUB ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+  </main>
+
+  <footer class="container">
+    <span>© 2026 Varun Deshpande</span>
+    <span>BUILD → SHIP → MEASURE</span>
   </footer>
+
 </body>
 </html>
-
